@@ -20,7 +20,7 @@ public void OnPluginStart()
     g_cvEnabled = CreateConVar("sm_ggmap_enabled", "1", "Enable Plugin");
     g_cvMaxFrags = CreateConVar("sm_ggmap_frags", "24", "Max Frags to Change Map");
     g_cvMapVote = CreateConVar("sm_ggmap_cmd", "sm_umc_mapvote 0", "MapVote Command");
-    HookEvent("player_death", Event_PlayerDeath, EventHookMode_Post);
+    HookEvent("player_death", Event_PlayerDeath);
 }
  
 public Action Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast)
